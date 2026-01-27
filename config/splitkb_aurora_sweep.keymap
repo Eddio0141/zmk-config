@@ -32,13 +32,24 @@
         };
     };
 
+    behaviors {
+        mt_lshft: mt_lshft {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <350>;
+            bindings = <&kp>, <&kp>;
+            display-name = "Mod-Tap-LSHFT";
+        };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
 
             default_layer {
         bindings = <
         &kp Q &kp W &kp E &kp R &kp T                       &kp Y &kp U  &kp I    &kp O   &kp P
-        &mt LSHFT A &kp S &kp D &kp F &kp G                               &kp H &kp J &kp K &kp L &kp SEMI
+        &mt_lshft LSHFT A &kp S &kp D &kp F &kp G                               &kp H &kp J &kp K &kp L &kp SEMI
         &mt LCTRL Z &kp X &kp C &kp V &kp B                      &kp N &kp M  &kp COMMA &kp DOT &mt LSHFT FSLH
                         &kp LGUI &mo LEFT_LAYER                  &kp RET &mo RIGHT_LAYER
         >;
