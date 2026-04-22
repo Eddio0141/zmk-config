@@ -67,7 +67,7 @@
         &kp EXCL  &kp AT &kp HASH  &kp DLLR  &kp PRCNT             &kp CARET  &kp AMPS &kp KP_MULTIPLY &kp LPAR &kp RPAR
         &sk LSHFT  &kp QMARK  &kp FSLH  &kp COLON  &kp SEMI           &kp LEFT &kp DOWN &kp UP  &kp RIGHT   &kp BSPC
         &kp LCTRL  &kp LALT &kp LBKT &kp RBKT   &kp BSLH             &kp TILDE2  &kp MINUS &kp EQUAL &kp LBKT  &kp RBKT
-                      &trans &mo TRI_LAYER                &trans  &trans
+                      &kp SPACE &mo TRI_LAYER                &trans  &trans
         >;
         };
 
