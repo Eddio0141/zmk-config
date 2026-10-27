@@ -39,6 +39,17 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+        qemu_escape: qemu_escape {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_press &kp LALT>
+                , <&macro_tap &kp G>
+                , <&macro_release &kp LALT>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
         lgui_layer: lgui_layer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -85,7 +96,7 @@
         bindings = <
         &kp F1  &kp F2  &kp F3    &kp F4    &kp F5             &kp F6 &kp F7   &kp F8   &kp F9  &kp F10
         &kp F11 &kp F12 &kp F13 &kp F14 &kp F15                          &ctrl_print &kp PG_UP  &kp K_VOL_UP &kp K_MUTE &trans
-        &kp K_MUTE  &kp K_VOL_DN &kp K_VOL_UP &kp F6 &kp F7                 &kp PSCRN &kp PG_DN  &kp K_VOL_DN  &trans &trans
+        &kp K_MUTE  &kp K_VOL_DN &kp K_VOL_UP &kp F6 &qemu_escape                 &kp PSCRN &kp PG_DN  &kp K_VOL_DN  &trans &trans
                      &trans &trans                      &trans &trans
         >;
         };
